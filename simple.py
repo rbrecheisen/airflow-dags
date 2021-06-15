@@ -13,6 +13,5 @@ with DAG(
     connect = DockerOperator(
         task_id='connect',
         image='brecheisen/simple-connect:latest',
-        command='connect',
-        # volumes=['simple:/data'],
+        command='connect.py',
     )
