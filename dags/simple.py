@@ -7,12 +7,14 @@ from irods.session import iRODSSession
 
 def _connect_to_irods():
     print('Connecting to IRODS...')
+    # Note that the following call ALWAYS returns a session object...
+    # Even if IP address is wrong
     session = iRODSSession(
-        host='137.120.31.124',
+        host='137.120.31.123',
         port=1247,
         user='rods',
         password='irods', zone='nlmumc')
-    print(session)
+    print(session.collections)
 
 
 with DAG(
