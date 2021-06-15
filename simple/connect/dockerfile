@@ -1,4 +1,0 @@
-FROM python:3.8-slim
-COPY connect.py /usr/local/bin/connect
-RUN chmod +x /usr/local/bin/connect
-ENV PATH="/usr/local/bin:${PATH}"
