@@ -2,10 +2,17 @@ import datetime as dt
 
 from airflow import DAG
 from airflow.operators.python import PythonOperator
+from irods.session import iRODSSession
 
 
 def _connect_to_irods():
     print('Connecting to IRODS...')
+    session = iRODSSession(
+        host='137.120.31.123',
+        port=1247,
+        user='rods',
+        password='irods', zone='nlmumc')
+    print(session)
 
 
 with DAG(
