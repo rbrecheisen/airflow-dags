@@ -7,8 +7,7 @@ from airflow.providers.docker.operators.docker import DockerOperator
 with DAG(
         dag_id='simple',
         description='Simple DAG that connects to XNAT',
-        start_date=dt.datetime(2021, 6, 1),
-        schedule_interval="@daily",
+        start_date=dt.datetime(2021, 6, 15),
 ) as dag:
     connect = DockerOperator(
         task_id='connect',
