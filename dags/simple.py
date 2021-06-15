@@ -14,7 +14,7 @@ with DAG(
         start_date=dt.datetime(2021, 6, 15),
 ) as dag:
 
-    my_operator = PythonOperator(
+    connect_to_irods = PythonOperator(
         task_id='connect_to_irods',
         python_callable=_connect_to_irods,
     )
