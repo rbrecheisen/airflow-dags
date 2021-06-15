@@ -8,11 +8,11 @@ from irods.session import iRODSSession
 def _connect_to_irods():
     print('Connecting to IRODS...')
     session = iRODSSession(
-        host='137.120.31.123',
+        host='137.120.31.124',
         port=1247,
         user='rods',
         password='irods', zone='nlmumc')
-    print(session.collections)
+    print(session)
 
 
 with DAG(
