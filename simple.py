@@ -8,10 +8,11 @@ with DAG(
         dag_id='simple',
         description='Simple DAG that connects to XNAT',
         start_date=dt.datetime(2021, 6, 1),
-        end_date=dt.datetime(2021, 6, 1), schedule_interval="@daily",
+        schedule_interval="@daily",
 ) as dag:
     connect = DockerOperator(
         task_id='connect',
         image='brecheisen/simple-connect:latest',
-        command='connect.py', volumes=['simple:/data'],
+        command='connect.py',
+        # volumes=['simple:/data'],
     )
