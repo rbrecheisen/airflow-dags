@@ -2,10 +2,7 @@ import datetime as dt
 
 from airflow import DAG
 from airflow.operators.python import PythonOperator
-
-
-def _connect_to_irods():
-    print('Connecting to IRODS...')
+from .tasks.simple.connect_to_irods import _connect_to_irods
 
 
 with DAG(
