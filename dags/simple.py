@@ -12,7 +12,7 @@ def _connect_to_irods():
         port=1247,
         user='rods',
         password='irods', zone='nlmumc')
-    print(session)
+    print(session.collections)
 
 
 with DAG(
